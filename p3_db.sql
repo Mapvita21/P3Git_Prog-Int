@@ -12,7 +12,22 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Volcando datos para la tabla p3_db.trabajadores: ~0 rows (aproximadamente)
+
+-- Volcando estructura de base de datos para p3_db
+CREATE DATABASE IF NOT EXISTS `p3_db` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `p3_db`;
+
+-- Volcando estructura para tabla p3_db.trabajadores
+CREATE TABLE IF NOT EXISTS `trabajadores` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` tinytext,
+  `apellido` tinytext,
+  `email` tinytext,
+  `mensaje` tinytext,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla p3_db.trabajadores: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `trabajadores` DISABLE KEYS */;
 INSERT INTO `trabajadores` (`id`, `nombre`, `apellido`, `email`, `mensaje`) VALUES
 	(1, 'Miguel', 'Perez', 'mapita@gmail.com', 'holi'),
